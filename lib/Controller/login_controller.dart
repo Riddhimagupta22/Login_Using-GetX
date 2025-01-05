@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 import 'package:http/http.dart'as http;
 
 class LoginController extends GetxController {
-  final emailController = TextEditingController().obs;
-  final passwordController = TextEditingController().obs;
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   RxBool loading = false.obs ;
 
@@ -15,19 +15,32 @@ class LoginController extends GetxController {
 
     try {
       final response = await http.post(Uri.parse('https://reqres.in/api/login'), body: {
-        'email': emailController.value.text,
-        'password': passwordController.value.text,
+        'email': emailController.text,
+        'password': passwordController.text,
       });
 
       var data = jsonDecode(response.body);
 
       if(response.statusCode == 200){
         loading.value = false;
+        Get.snackbar(
+          'Login Done',
+          'Congratulations',
+        );
       }
       else{
+        loading.value = false;
+        Get.snackbar(
+          'Login Failed',
+          data['error'],
+        );
 
       }
     } catch(e){
+      loading.value = false;
+      Get.snackbar('Error','',
+        snackPosition: SnackPosition.BOTTOM,
+      );
   }
 }}
 

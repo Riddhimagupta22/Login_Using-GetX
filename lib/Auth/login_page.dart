@@ -82,7 +82,7 @@ import 'package:login/Controller/login_controller.dart';
                             child: SizedBox(
                               height: size.height * .06,
                               child: TextField(
-                                controller: controller.emailController.value,
+                                controller: controller.emailController,
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(
                                       borderSide: BorderSide.none,
@@ -102,7 +102,7 @@ import 'package:login/Controller/login_controller.dart';
                             child: SizedBox(
                               height: size.height * .06,
                               child: TextField(
-                                controller: controller.passwordController.value,
+                                controller: controller.passwordController,
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(
                                       borderSide: BorderSide.none,
