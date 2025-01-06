@@ -1,16 +1,20 @@
-# login
+# Login Page GetX
 
-A new Flutter project.
+This project demonstrates the implementation of a Login Page in Flutter using GetX for state management. It includes an API call to authenticate users, with proper error handling and UI feedback.
 
-## Getting Started
+## 💫Features
 
-This project is a starting point for a Flutter application.
+- User authentication via https://reqres.in/api/login.
+- Input fields for email : **eve.holt@reqres.in** and password : **cityslicka**.
+- Real-time feedback during login (loading indicators).
+- Snackbar notifications for success and failure cases.
 
-A few resources to get you started if this is your first Flutter project:
+  ## 📷Login Ui
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  <img src = "https://github.com/user-attachments/assets/82f7b605-338f-4818-8189-156b692bbc96" height="500" width="220"/>
+  <img src = "https://github.com/user-attachments/assets/a933185c-db8f-469f-809e-e87fa0e1125f" height="500" width="220"/>
+  <img src = "https://github.com/user-attachments/assets/4ad46a26-9f27-45e7-bf97-29b09fa6b7e9" height="500" width="220"/>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  
+
+
